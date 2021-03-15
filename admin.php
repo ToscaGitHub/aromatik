@@ -1,9 +1,4 @@
-<?php require_once("includes/header.inc.php"); ?>
-
-<?php 
-
-// AUTHENTIFICATION DE L'ADMINISTRATEUR
-
+<?php
 session_start();
 if (!empty($_SESSION["connect"])) {
     if ($_SESSION["connect"] === true) {
@@ -12,7 +7,4 @@ if (!empty($_SESSION["connect"])) {
         exit;
     }
 }
-
 ?>
-
-<?php require_once("includes/footer.inc.php"); ?>
