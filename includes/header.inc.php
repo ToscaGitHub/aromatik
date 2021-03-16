@@ -7,11 +7,14 @@
     <title>Aromatik</title>
 
     
-    <link rel="stylesheet" href="vendors/css/bootstrap.css">    
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/uikit/css/uikit.min.css"    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
  
-    <script src="vendors/js/bootstrap.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.js"></script>
+    <script src="vendors/uikit/js/uikit.min.js"></script>
+    <script src="vendors/uikit/js/uikit-icons.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
 
@@ -28,6 +31,11 @@
 
         <div>
 
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À Propos</a>
+            <a href="#noscartes">Nos Cartes</a>
+            <a href="#reservation">Réservation</a>
+            <a href="#contact">Nous Contacter</a>
 
 
         </div>
