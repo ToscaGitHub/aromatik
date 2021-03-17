@@ -95,19 +95,21 @@
                             
                             <?php
                             
-                        
-                            while ($entrees = $result->fetch(PDO::FETCH_OBJ)) { ?>
-                                <?php $user = $pdo->query("SELECT titre_repas(*), prix_repas FROM menu_repas_aromatik WHERE type_repas = 'entree'");
-                                $curr = $user->fetch(PDO::FETCH_OBJ);
-                            ?>
+                            $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'entree'");
 
 
+                            while ($entrees = $result->fetch(PDO::FETCH_ASSOC)) { 
+                            
+                                
+                                ?>
+
+                                <p> <?php echo $entrees['titre_repas']; ?> </p>
+                            
 
                             
                             <?php } ?>
 
-
-                            ?>
+                            
 
 
                             <h5>Les Poissons</h5>
