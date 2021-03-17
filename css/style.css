@@ -24,25 +24,110 @@ body {
     width: 100%;
     margin: 0;
 
+    border-top: 3px solid #468465;
+
 
 }
 
-nav {
+.nav_bar {
 
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
+    
+    width: 100%;
+
+    position: absolute;
+    
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    
+    z-index: 100;
+
+}
+
+#accueil {
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+	overflow: hidden;
+
+    position: relative;
+
+}
+
+#accueil video {
+    
+    z-index: -2;
+
+}
+
+
+.navbar-fixed {
+
+    background-color: rgb(255, 255, 255);
+    
     position: fixed;
     top: 0;
     width: 100%;
+    
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+}
+
+nav img {
+
+    width: 150px;
+    height: 35px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+
+}
+
+.onglets {
+
+    text-align: right;
+
+    padding-right: 50px;
 
 }
 
 nav a {
-
+    
+    color: #468465;
     text-decoration: none;
 
     font-family: 'Sarabun', sans-serif;
     font-style: thin;
-    font-size: 30px;
+    font-size: 18px;
+
+    margin-left: 65px;
+
+
+}
+
+nav a:hover {
+
+    color: #57b385;
+    text-decoration: none;
 
 }
 
@@ -59,21 +144,21 @@ nav a {
     padding-bottom: 10px;
 
     background-color: white;
-
+    
     border-top: 2px solid #468465;
     border-left: 2px solid #468465;
     border-bottom: 2px solid #468465;
-
+    
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
+    
 }
 
 .socialmedia a {
-
+    
     margin-top: 15px;
     margin-left: 7px;
-
+    
 }
 
 
@@ -113,6 +198,21 @@ nav a {
 
 }
 
+#apropos {
+
+    padding-top: 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 60%;
+
+    text-align: center;
+    
+	position: relative;
+
+}
+
 #apropos h2 {
 
     font-family: 'SunshineValley', sans-serif;
@@ -142,6 +242,26 @@ nav a {
     font-size: 130px;
 
     color: #468465;
+
+}
+
+.modal-dialog {
+
+    max-width: 1000px;
+
+}
+
+.carteFood {
+    
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.carteDrinks {
+    
+    margin-left: auto;
+    margin-right: auto;
 
 }
 

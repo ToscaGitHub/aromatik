@@ -26,18 +26,30 @@
         include("includes/init.inc.php"); 
 
     ?>
+        
+        <div class="uk-cover-container web" id="accueil">
+        <nav class="nav_bar">
+                
+                <div class="logo">
+                    
+                    <img src="images/logo.png" alt="logo">
+                    
+                </div>
+                <div class="onglets">
+                    
+                    <a href="#accueil">ACCUEIL</a>
+                    <a href="#propos">À PROPOS</a>
+                    <a href="#noscartes">NOS CARTES</a>
+                    <a href="#reservation">RÉSERVATION</a>
+                    <a href="#contact">NOUS CONTACTER</a>
+                    
+                </div>
+                
 
-    <nav>
+        </nav>
 
-        <div>
-
-            <a href="#accueil">Accueil</a>
-            <a href="#apropos">À Propos</a>
-            <a href="#noscartes">Nos Cartes</a>
-            <a href="#reservation">Réservation</a>
-            <a href="#contact">Nous Contacter</a>
-
+            
+            <video autoplay muted loop src="videos/vidtest.mp4" type="video/mp4"></video>
 
         </div>
-
-    </nav>
+            
