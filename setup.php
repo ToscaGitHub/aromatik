@@ -1,12 +1,24 @@
 <?php
 
-    $result = $pdo->exec("CREATE TABLE menu_repas_aromatik (
-                            id_repas INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-                            type_repas VARCHAR(40),
-                            titre_repas VARCHAR(200),
-                            prix_repas INT(3) NULL
-                     ");
- 
+    include("includes/init.inc.php"); 
+    
+    $table = "menu_repas_aromatik";
+    $values = "id_repas INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+                type_repas VARCHAR(40),
+                titre_repas VARCHAR(200),
+                prix_repas INT(3) NULL";
+
+    $result = $pdo->exec("CREATE TABLE $table ($values)");
+
+    if ($result) 
+    {
+        echo "La Table $table a été créé!<br /><br />";
+    }
+    else 
+    {
+        echo "La Table $table n'a été créé! <br /><br />";
+    }
+    ?>
  
  
  

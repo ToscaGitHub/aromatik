@@ -64,6 +64,7 @@
                                 <img src="images/slider5.jpg" alt="">
                                 <div class="uk-position-center uk-panel"><h1>5</h1></div>
                             </div>
+                            
                         </li>
                     </ul>
 
@@ -75,57 +76,172 @@
                         
                         
                 <div class="web" id="noscartes">
-
-
-                    <button type="button" class="sendAll" data-bs-toggle="modal" data-bs-target="#repasModal">
-                    <h3>Carte des Repas</h3>
+                    
+                    
+                    <button type="button" class="buttonMenu buttonMenuRepas" data-bs-toggle="modal" data-bs-target="#repasModal">
+                        <h3>Carte des Repas</h3>
                     </button>
-
-
-                                <!-- Modal -->
+                    
+                    
+                    <!-- Modal -->
                     <div class="modal fade" id="repasModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content carteFood">
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="exampleModalLabel">Carte des Repas</h3>
-                        </div>
-                        <div class="modal-body">
-                            
-                        <h5>Les Entrées</h5>
-                            
-                            <?php
-                            
-                            $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'entree'");
-
-
-                            while ($entrees = $result->fetch(PDO::FETCH_ASSOC)) { 
-                            
+                        <div class="modal-dialog">
+                            <div class="modal-content carteFood">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel">Carte des Repas</h3>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    <h5>Les Entrees</h5>
+                                    
+                                    <?php
                                 
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'entree'");
+
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($entrees = $result->fetch(PDO::FETCH_ASSOC)) { 
+                                    ?>
+
+                                        <p class="titleCard">
+                                        <span><?php echo $entrees['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $entrees['prix_repas']. "€"?></span></p>
+                                
+
+                                
+                                <?php 
+                                    }
+                                }
+                                else {
                                 ?>
 
-                                <p> <?php echo $entrees['titre_repas']; ?> </p>
-                            
-
-                            
-                            <?php } ?>
-
+                                    <p>Aucune Entrée Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
                             
 
 
                             <h5>Les Poissons</h5>
 
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'poisson'");
 
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($poissons = $result->fetch(PDO::FETCH_ASSOC)) { 
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $poissons['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $poissons['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Poisson Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
 
                             <h5>Les Viandes</h5>
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'viande'");
 
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($viandes = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $viandes['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $viandes['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucune Viande Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
 
 
                             <h5>Les Fromages</h5>
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'fromage'");
 
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($fromages = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $fromages['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $fromages['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Fromage Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
 
 
                             <h5>Les Desserts</h5>
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'dessert'");
 
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($desserts = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $desserts['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $desserts['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Dessert Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
 
 
 
@@ -141,9 +257,13 @@
                     </div>
 
 
-                    <button type="button" class="sendAll" data-bs-toggle="modal" data-bs-target="#boissonModal">
-                    <h3>Carte des Boissons</h3>
-                    <h3>et des Vins</h3>
+                    <span class="separation"></span>
+
+                    <button type="button" class="buttonMenu buttonMenuBoisson" data-bs-toggle="modal" data-bs-target="#boissonModal">
+                        <div id="DIVcarteDrink">
+                            <h3 class="H3carteDrink">Carte des Boissons</h3>
+                            <h3 class="H3carteDrink">et des Vins</h3>
+                        </div>
                     </button>
 
                                 <!-- Modal -->
@@ -155,6 +275,163 @@
                             <h3 class="modal-title" id="exampleModalLabel">et des Vins</h3>
                         </div>
                         <div class="modal-body">
+                                    
+                                    <h5>Nos Vins Rouges</h5>
+                                    
+                                    <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'entree'");
+
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($entrees = $result->fetch(PDO::FETCH_ASSOC)) { 
+                                    ?>
+
+                                        <p class="titleCard">
+                                        <span><?php echo $entrees['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $entrees['prix_repas']. "€"?></span></p>
+                                
+
+                                
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Vin Rouge Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
+                            
+
+
+                            <h5>Les Poissons</h5>
+
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'poisson'");
+
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($poissons = $result->fetch(PDO::FETCH_ASSOC)) { 
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $poissons['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $poissons['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Poisson Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
+
+                            <h5>Les Viandes</h5>
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'viande'");
+
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($viandes = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $viandes['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $viandes['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucune Viande Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
+
+
+                            <h5>Les Fromages</h5>
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'fromage'");
+
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($fromages = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $fromages['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $fromages['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Fromage Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
+
+
+                            <h5>Les Desserts</h5>
+                                <?php
+                                
+                                $result = $pdo->query("SELECT titre_repas, prix_repas FROM menu_repas_aromatik WHERE type_repas = 'dessert'");
+
+                                if (!empty($result)) {
+                                    
+                                    
+                                    while ($desserts = $result->fetch(PDO::FETCH_ASSOC)) {
+                                    ?>
+    
+                                        <p class="titleCard">
+                                        <span><?php echo $desserts['titre_repas']; ?></span>
+                                        <span class="priceCard"><?php echo $desserts['prix_repas']. "€"?></span></p>
+                                    
+    
+                                    
+                                <?php 
+                                    }
+                                }
+                                else {
+                                ?>
+
+                                    <p>Aucun Dessert Disponible</p>
+                                
+                                <?php
+                                }
+                                ?>
+
+
+
+
+
+
 
 
                             
@@ -174,12 +451,19 @@
                     <div class="parallax"></div>
                             
                 <div class="web" id="reservation">
+
+                    <iframe src='https://bookings.zenchef.com/results?rid=353548&fullscreen=1' frameborder='0' scrolling='yes' width='100%' height='875'></iframe>
+                    <iframe src='https://commands.zenchef.com/results?rid=353548&fullscreen=1' frameborder='0' scrolling='yes' width='100%' height='875'></iframe>
+
                     
                 </div>
                        
                     <div class="parallax"></div>
                                   
                 <div class="web" id="contact">
+
+
+
                                     
                 </div>
                                     

@@ -27,7 +27,7 @@
 
     ?>
         
-        <div class="uk-cover-container web" id="accueil">
+        <div class="uk-cover-container" id="accueil">
         <nav class="nav_bar">
                 
                 <div class="logo">
@@ -49,7 +49,9 @@
         </nav>
 
             
-            <video autoplay muted loop src="videos/vidtest.mp4" type="video/mp4"></video>
+            <video autoplay muted loop src="" type="video/mp4"></video>
+            <!-- src="videos/aromatik.mp4" -->
+
 
         </div>
             
