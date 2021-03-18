@@ -19,7 +19,7 @@
     <script src="js/main.js"></script>
 
 </head>
-<body>
+<body id="accueilpage">
 
     <?php 
 
@@ -28,30 +28,34 @@
     ?>
         
         <div class="uk-cover-container" id="accueil">
-        <nav class="nav_bar">
-                
-                <div class="logo">
-                    
-                    <img src="images/logo.png" alt="logo">
-                    
-                </div>
-                <div class="onglets">
-                    
-                    <a href="#accueil">ACCUEIL</a>
-                    <a href="#propos">À PROPOS</a>
-                    <a href="#noscartes">NOS CARTES</a>
-                    <a href="#reservation">RÉSERVATION</a>
-                    <a href="#contact">NOUS CONTACTER</a>
-                    
-                </div>
-                
 
-        </nav>
+            <nav class="nav_bar">
+                    
+                    <div class="logo">
+                        
+                        <img src="images/logo.png" alt="logo">
+                        
+                    </div>
+                    <div class="onglets">
+                        
+                        <a href="#accueilpage">ACCUEIL</a>
+                        <a href="#propos">À PROPOS</a>
+                        <a href="#noscartes">NOS CARTES</a>
+                        <a href="#reservation">RÉSERVATION</a>
+                        <a href="#contact">NOUS CONTACTER</a>
+                        
+                    </div>
+                    
 
-            
-            <video autoplay muted loop src="" type="video/mp4"></video>
+            </nav>
+
+        
+            <div class="video"> 
+
+                <video autoplay muted loop src="videos/aromatik.mp4" type="video/mp4"></video>
+
             <!-- src="videos/aromatik.mp4" -->
-
+            </div>
 
         </div>
             

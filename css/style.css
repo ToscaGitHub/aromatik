@@ -17,6 +17,12 @@
          url('../fonts/SunshineValley/Sarabun-SemiBold.ttf') format('ttf');
 }
 
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
 /* GENERAL CSS */
 
 body {
@@ -27,6 +33,9 @@ body {
     
     
 }
+
+/* ================================================================= */
+/* ================================================================= */
 
 
 
@@ -69,6 +78,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     
+
     display: flex;
     align-items: center;
     
@@ -76,6 +86,12 @@ body {
     
     z-index: 100;
     
+}
+
+.navbar-fixed a {
+
+    color: #468465;
+
 }
 
 nav img {
@@ -99,7 +115,7 @@ nav img {
 
 nav a {
     
-    color: #468465;
+    color: #ffffff;
     text-decoration: none;
 
     font-family: 'Sarabun', sans-serif;
@@ -139,6 +155,16 @@ nav a:hover {
 
 }
 
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+
+
+
+
 /* VIDEO ACCUEIL */
 
 #accueil video {
@@ -150,8 +176,17 @@ nav a:hover {
     
 }
 
+.video {
 
+    max-width: 100vw;
+    max-height: 100vh;
 
+    width: 100vw;
+    height: 100vh;
+
+    display: grid 100%;
+
+}
 
 .socialmedia {
 
@@ -173,6 +208,8 @@ nav a:hover {
     
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+
+    z-index: 150;
     
 }
 
@@ -182,9 +219,6 @@ nav a:hover {
     margin-left: 7px;
     
 }
-
-
-
 
 
 
@@ -209,9 +243,26 @@ nav a:hover {
 
 }
 
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+
+
+/* A PROPOS */
+
+#paraPropos {
+
+    padding-bottom: 200px;
+
+}
+
 #apropos {
 
-    padding-top: 50px;
+    padding-top: 150px;
+    margin-bottom: 200px;
 
     margin-left: auto;
     margin-right: auto;
@@ -236,9 +287,58 @@ nav a:hover {
 #apropos p {
     
     font-family: 'Sarabun', sans-serif;
-    font-size: 45px;
+    font-size: 35px;
     
 }
+
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+
+
+
+/* CARROUSEL D'IMAGE */
+
+.carrouselMargin {
+
+    margin-bottom: 250px;
+
+}
+
+.carrouselStyle {
+
+    margin-bottom: 150px;
+
+}
+
+.carrousel img {
+
+    object-fit: cover;
+    width: 900px;
+    height: 500px;
+
+}
+
+
+.uk-slidenav {
+    padding: 13px 14px;
+    color: #fff;
+    background: #468465c0;
+    transition: .1s ease-in-out;
+    transition-property: all;
+    transition-property: color,background-color,border-color,box-shadow;
+}
+
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+
 
 
 /* MENU REPAS & BOISSONS */
@@ -278,6 +378,14 @@ nav a:hover {
     margin: 0 auto;
     
 }
+
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+
 
 
 
@@ -360,6 +468,11 @@ nav a:hover {
 
 }
 
+/* ================================================================= */
+/* ================================================================= */
+
+
+
 
 
 
@@ -402,6 +515,15 @@ nav a:hover {
 }
     
 
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+
+
+
 
 
 
@@ -431,6 +553,70 @@ nav a:hover {
     color: #468465;
         
 }
+
+#boissonModal h5 {
+
+    font-family: 'SunshineValley', sans-serif;
+    font-size: 50px;
+    
+    margin-left: 7px;
+    
+    color: #468465;
+    
+}
+
+#boissonModal p {
+    
+    font-family: 'Sarabun', sans-serif;
+    font-size: 20px;
+    
+}
+
+.oneDrink {
+
+    border-bottom: 1px solid black;
+    display: flex;
+
+    margin-top: 25px;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.textDrink {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titleDrink p {
+
+    margin-bottom: 0px;
+
+}
+
+
+.descDrink p {
+
+    margin-bottom: 0px;
+
+}
+
+
+.numDrink {
+
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.numDrink div p {
+
+    margin-bottom: 0px;
+
+}
     
 
 
@@ -442,27 +628,103 @@ nav a:hover {
 }
 
 
+/* ================================================================= */
+/* ================================================================= */
 
 
 
 
 
 
+/* RESERVATION */
 
+#reservation h3 {
 
+    font-family: 'SunshineValley', sans-serif;
+    font-size: 100px;
 
+    padding-top: 100px;
+    margin-bottom: -40px;
 
-#reservation {
+    text-align: center;
+    
+    color: #468465;
+
+}
+
+#resa {
 
     display: flex;
     flex-direction: row;
 
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 75%;
+
+}
+
+#resa iframe {
+
+    margin-right: 50px;
+
+    border: 1px solid #468465;
+
+}
+
+
+
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+
+/* CONTACT */
+
+
+.ContactDiv {
+
+    background-color: rgba(255, 255, 255, 0);
 
 }
 
 
 
 
+
+
+
+
+
+
+
+
+/* ================================================================= */
+/* ================================================================= */
+
+
+
+/* MAP & HORRAIRES*/
+
+.wRu {
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.horaire {
+
+    text-align: center;
+
+}
+
+.map {
+
+
+
+}
 
 
 
