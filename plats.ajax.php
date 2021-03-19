@@ -1,0 +1,25 @@
+<?php
+include("includes/init.inc.php");
+if (isset($_POST["sup"])) {
+        $suprMenu = 'DELETE FROM menu_repas_aromatik WHERE id_repas= "' . $_POST["sup"] . '" ';
+        $menuSpr = $pdo->exec('DELETE FROM menu_repas_aromatik WHERE id_repas= "' . $_POST["sup"] . '" ');
+    }
+
+    $requestTitreMenu = 'SELECT titre_repas, id_repas FROM menu_repas_aromatik';
+    $envoieTitreMenu = $pdo->query($requestTitreMenu);
+    while ($printerMenu = $envoieTitreMenu->fetch(PDO::FETCH_ASSOC)) {
+            ?>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?php echo $printerMenu["titre_repas"] ?></h5>
+                            <button class="btn btn-primary" value="<?php echo $printerMenu['id_repas'] ?>" onclick="supr(this.value)">supprimer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php
+    }
+    ?>

@@ -10,6 +10,58 @@
 
     $result = $pdo->exec("CREATE TABLE $table ($values)");
 
+
+
+//     CREATE TABLE menu_boisson_aromatik (
+//          id_boisson INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+//          type_boisson VARCHAR(50),
+//          titre_boisson VARCHAR(200),
+//          description_boisson VARCHAR(200),
+//          prix_boisson INT(4) NULL,
+//          prix2_boisson INT(4) NULL,
+//          contenance_boisson INT(4) NULL,
+//          contenance2_boisson INT(4) NULL
+
+//      );
+
+
+//      CREATE TABLE menu_menu_aromatik (
+//          id_menu INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+//          titre_menu VARCHAR(100),
+//          entre_menu VARCHAR(200),
+//          plat_menu VARCHAR(200),
+//          dessert_menu VARCHAR(200),
+//          prix_menu VARCHAR(200)
+
+//       );
+
+
+//       CREATE TABLE horaire_aromatik (
+//          id_horaire INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+//          ouverture_midi INT(5) NULL,
+//          fermeture_midi INT(5) NULL,
+//          ouverture_soir INT(5) NULL,
+//          fermeture_soir INT(5) NULL
+
+//        );
+
+//        CREATE TABLE info (
+//          id_info INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+//          num_tel INT
+//        );
+
+
+
+
+
+
+
+
+
+
+
+
+
     if ($result) 
     {
         echo "La Table $table a été créé!<br /><br />";

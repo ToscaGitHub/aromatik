@@ -222,6 +222,10 @@ nav a:hover {
 
 
 
+
+
+/* PARALLAX 1 & 2 */
+
 .parallax {
     /* The image used */
     background-image: url("../images/background.png");
@@ -234,6 +238,27 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../images/parallax2.png");
+  
+    /* Set a specific height */
+    min-height: 800px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: -100;
     
 }
 
@@ -343,7 +368,7 @@ nav a:hover {
 
 /* MENU REPAS & BOISSONS */
 
-.web {
+#noscartes {
     
     background-color: white;
     display: flex;
@@ -354,6 +379,9 @@ nav a:hover {
 
     padding-top: 150px;
     padding-bottom: 150px;
+
+    /* position: relative; */
+    z-index: 3;
     
 }
 
@@ -368,7 +396,7 @@ nav a:hover {
 }
 
 
-.web h3 {
+#noscartes h3 {
     
     font-family: 'SunshineValley', sans-serif;
     font-size: 70px;
@@ -378,6 +406,15 @@ nav a:hover {
     margin: 0 auto;
     
 }
+
+.carteSelect {
+
+    display: flex;
+    align-content: center;
+
+}
+
+
 
 /* ================================================================= */
 /* ================================================================= */
@@ -475,10 +512,6 @@ nav a:hover {
 
 
 
-
-
-
-
 /* CARTE DES REPAS STYLE */
 
 
@@ -530,25 +563,17 @@ nav a:hover {
 
 
 /* CARTE DES BOISSONS STYLE */
-    
+
+
 .buttonMenuBoisson {
-        
+    
     background-color: rgba(255, 255, 255, 0);
     border: 0px solid;
-        
+    
 }
-    
-    
-.buttonMenuBoisson:hover {
-        
-    background-color: rgba(255, 255, 255, 0);
-    border: 0px solid;
-    color: #56d495;
-        
-}
-    
+
 #H3carteDrink {
-        
+    
     margin-bottom: -35px;
     color: #468465;
         
@@ -634,17 +659,81 @@ nav a:hover {
 
 
 
+/* CARTE MENU AFFAIRE */
+
+#menuAffaire {
+
+    background-color: rgb(255, 255, 255);
+    width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    z-index: 0;
+    
+    border-top: 1px solid #468465;
+    border-left: 1px solid #468465;
+    border-right: 1px solid #468465;
+
+    display: none;
+
+}
+
+#menuAffaire h5 {
+
+    font-family: 'SunshineValley', sans-serif;
+    font-size: 50px;
+    
+    margin-left: 7px;
+    
+    color: #468465;
+
+}
+
+#titreAffaire {
+
+    background-image: url('../images/background.png');
+
+}
+
+#titreAffaire h3 {
+
+    font-family: 'SunshineValley', sans-serif;
+    font-size: 50px;
+
+    width: 650px;
+
+    text-align: center;
+    
+    color: #468465;
+
+    border: 1px solid #468465;
+
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+
+}
+
+
 
 
 /* RESERVATION */
+
+#reservation {
+
+    margin-bottom: 120px;
+
+}
 
 #reservation h3 {
 
     font-family: 'SunshineValley', sans-serif;
     font-size: 100px;
 
-    padding-top: 100px;
-    margin-bottom: -40px;
+    padding-top: 80px;
+    margin-bottom: 80px;
 
     text-align: center;
     
@@ -686,6 +775,47 @@ nav a:hover {
 .ContactDiv {
 
     background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ContactDiv p {
+
+    font-family: 'Sarabun', sans-serif;
+    font-size: 25px;
+
+}
+
+#phone {
+
+    padding-top: 250px;
+    padding-bottom: 250px;
+
+    text-align: center;
+
+}
+
+#location {
+
+    padding-top: 250px;
+    padding-bottom: 250px;
+
+    text-align: center;
+
+}
+
+#media {
+
+    padding-top: 250px;
+    padding-bottom: 250px;
+
+    text-align: center;
 
 }
 
@@ -711,12 +841,29 @@ nav a:hover {
 
     display: flex;
     justify-content: space-evenly;
-
+    
 }
 
 .horaire {
-
+    
     text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.horaire p {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.horaire hr {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
 
 }
 
