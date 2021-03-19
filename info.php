@@ -12,7 +12,7 @@ if (!empty($_SESSION["connect"]) && $_SESSION["connect"] === true) { ?>
                     
                     <div class="mb-3">
                     <label class="form-label">Tel</label>
-                    <input type="number" class="form-control" name="num_tel">
+                    <input type="text" class="form-control" name="num_tel">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" >Envoyer</button>

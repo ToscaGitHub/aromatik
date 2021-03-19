@@ -42,12 +42,6 @@
                             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
                                 <li>
                                     <div class="uk-panel carrousel">
-                                        <img src="images/carrousel/1.png" alt="">
-                                        <div class="uk-position-center uk-panel"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel carrousel">
                                         <img src="images/carrousel/2.png" alt="">
                                         <div class="uk-position-center uk-panel"></div>
                                     </div>
@@ -67,6 +61,41 @@
                                 <li>
                                     <div class="uk-panel carrousel">
                                         <img src="images/carrousel/5.png" alt="">
+                                        <div class="uk-position-center uk-panel">></div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="uk-panel carrousel">
+                                        <img src="images/carrousel/6.png" alt="">
+                                        <div class="uk-position-center uk-panel">></div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="uk-panel carrousel">
+                                        <img src="images/carrousel/7.png" alt="">
+                                        <div class="uk-position-center uk-panel">></div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="uk-panel carrousel">
+                                        <img src="images/carrousel/8.png" alt="">
+                                        <div class="uk-position-center uk-panel">></div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="uk-panel carrousel">
+                                        <img src="images/carrousel/9.png" alt="">
+                                        <div class="uk-position-center uk-panel">></div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="uk-panel carrousel">
+                                        <img src="images/carrousel/10.png" alt="">
                                         <div class="uk-position-center uk-panel">></div>
                                     </div>
                                     
@@ -837,7 +866,7 @@
 
                         <div id="titreAffaire">
                             <?php
-                             $result = $pdo->query("SELECT entre_menu, plat_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
+                             $result = $pdo->query("SELECT entre_menu,viande_menu, poisson_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
     
                                 if (!empty($result)) {
                                                 
@@ -875,7 +904,7 @@
                             
                                                 <?php
                                             
-                                            $result = $pdo->query("SELECT entre_menu, plat_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
+                                            $result = $pdo->query("SELECT entre_menu, viande_menu, poisson_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
     
                                             if (!empty($result)) {
                                                 
@@ -905,7 +934,7 @@
                                                 
                                                 <?php
                                             
-                                            $result = $pdo->query("SELECT entre_menu, plat_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
+                                            $result = $pdo->query("SELECT entre_menu, viande_menu, poisson_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
     
                                             if (!empty($result)) {
                                                 
@@ -914,7 +943,10 @@
                                                 ?>
     
                                                     <p class="contentMenuAffaire">
-                                                    <?php echo $plats['plat_menu']; ?>
+                                                    <?php echo $plats['viande_menu']; ?>
+                                                    </p>
+                                                    <p class="contentMenuAffaire">
+                                                    <?php echo $plats['poisson_menu']; ?>
                                                     </p>
                                             
     
@@ -935,7 +967,7 @@
                                                 
                                                 <?php
                                             
-                                            $result = $pdo->query("SELECT entre_menu, plat_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
+                                            $result = $pdo->query("SELECT entre_menu, viande_menu, poisson_menu, dessert_menu, prix_menu FROM menu_menu_aromatik");
     
                                             if (!empty($result)) {
                                                 
@@ -986,8 +1018,11 @@
                     
                        
             <div class="parallax">
+                    
+                    <h3>Contact</h3>
 
                 <div class="ContactDiv" id="contact">
+
 
                     <div id="phone">
 
@@ -1042,9 +1077,9 @@
                     
 
                     <p>Du Mardi au Samedi</p>
-                    <p>Le Midi de <?php echo $horaires['ouverture_midi'] ?> à <?php echo $horaires['fermeture_midi'] ?></p>
+                    <p>Le Midi de <?php echo $horaires['ouverture_midi'] ?>h à <?php echo $horaires['fermeture_midi'] ?>h</p>
                     <hr>
-                    <p>Le Soir de <?php echo $horaires['ouverture_soir'] ?> à <?php echo $horaires['fermeture_soir'] ?></p>
+                    <p>Le Soir de <?php echo $horaires['ouverture_soir'] ?>h à <?php echo $horaires['fermeture_soir'] ?>h</p>
 
                 <?php
                 } else {

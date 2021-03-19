@@ -38,7 +38,7 @@ if (!empty($_SESSION["connect"]) && $_SESSION["connect"] === true) { ?>
     </div>
     <?php
     if (!empty($_POST["HOM"]) && !empty($_POST["HFM"]) && !empty($_POST["HOS"]) && !empty($_POST["HFS"])) {
-        $requetMenu = 'INSERT INTO horaire_aromatik (ouverture_midi,femeture_midi,ouverture_soir,femeture_soir) VALUES ("' . $_POST["HOM"] . '","' . $_POST["HFM"] . '","' . $_POST["HOS"] .'","' . $_POST["HFS"] .'")';
+        $requetMenu = 'INSERT INTO horaire_aromatik (ouverture_midi,fermeture_midi,ouverture_soir,fermeture_soir) VALUES ("' . $_POST["HOM"] . '","' . $_POST["HFM"] . '","' . $_POST["HOS"] .'","' . $_POST["HFS"] .'")';
         $execMenu = $pdo->exec($requetMenu);
     }
 

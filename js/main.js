@@ -83,9 +83,11 @@ $(function() {
   $('#titreAffaire').hover(function() {
       $('#menuAffaire').show();
       $('#titreAffaire').hide();
+      $('#titreMenuAffaire').css('background-image', 'url(images/goldLine2.png)')
   }, 
   function() {
     $('#menuAffaire').hide();
     $('#titreAffaire').show();
+    $('#titreMenuAffaire').css('background-image', 'none');
   });
 });
