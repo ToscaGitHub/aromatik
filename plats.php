@@ -9,9 +9,9 @@ if (!empty($_SESSION["connect"]) && $_SESSION["connect"] === true) { ?>
             <h5 class="card-title">Plat</h5>
             <div class="card-body">
                 <form method="POST">
-                    <label class="form-label">Type Plats</label>
+                    <label class="form-label">Type Plat</label>
                     <select class="form-select" aria-label="Default select example" name="type_plats">
-                        <option selected>Type Plats</option>
+                        <option selected>Type Plat</option>
                         <option value="entree">Entree</option>
                         <option value="viande">Viande</option>
                         <option value="poisson">Poisson</option>

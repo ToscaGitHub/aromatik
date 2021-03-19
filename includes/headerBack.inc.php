@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="vendors/css/bootstrap.css">
+    <title>Aromatik ADMIN</title>
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
     <?php require_once("includes/init.inc.php"); ?>
 </head>
 

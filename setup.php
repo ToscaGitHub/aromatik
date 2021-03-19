@@ -50,7 +50,22 @@
 //          num_tel INT
 //        );
 
+//        CREATE TABLE admin_aromatik (
+//          id_login INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+//          admin_name VARCHAR(40),
+//          admin_password VARCHAR(100)
+//        );
 
+                // FAIRE ENSUITE CECI DANS LA TABLE admin_aromatik
+                // INSERT INTO admin_aromatik(admin_name, admin_password)
+                // VALUES (
+                // 'admin',
+                // '51b522a58081badeae72493832a4662f'
+                // );
+
+                // CELA CRÉE UN USER ADMIN
+                // pseudo:  admin
+                // mdp:     aromatik
 
 
 

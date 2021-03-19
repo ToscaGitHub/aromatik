@@ -9,9 +9,9 @@ if (!empty($_SESSION["connect"]) && $_SESSION["connect"] === true) { ?>
             <h5 class="card-title">Boissons</h5>
             <div class="card-body">
                 <form method="POST">
-                    <label class="form-label">Type Boissons</label>
+                    <label class="form-label">Type Boisson</label>
                     <select class="form-select" aria-label="Default select example" name="type_boisson">
-                        <option selected>Type Plats</option>
+                        <option selected>Type Boisson</option>
                         <option value="vin rouge">Vin Rouge</option>
                         <option value="vin rose">Rosé</option>
                         <option value="vin blanc">Vin Blanc</option>
@@ -57,8 +57,18 @@ if (!empty($_SESSION["connect"]) && $_SESSION["connect"] === true) { ?>
     </div>
     <?php
     if (!empty($_POST["type_boisson"]) && !empty($_POST["titre_boisson"]) && !empty($_POST["description_boisson"]) && !empty($_POST["prix_boisson"]) && !empty($_POST["contenance_boisson"])) {
-        $requetMenu = 'INSERT INTO menu_boisson_aromatik (type_boisson,titre_boisson,description_boisson,prix_boisson,contenance_boisson,prix2_boisson,contenance2_boisson) VALUES ("' . $_POST["type_boisson"] . '","' . $_POST["titre_boisson"] . '","' . $_POST["description_boisson"] .'","' . $_POST["prix_boisson"] .'","' . $_POST["contenance_boisson"] .'","' . $_POST["prix2_boisson"] .'","' . $_POST["contenance2_boisson"] . '")';
-        $execMenu = $pdo->exec($requetMenu);
+
+        if (!empty($_POST['prix2_boisson']) && !empty($_POST['contenance2_boisson'])) {
+            
+            $requetMenu = 'INSERT INTO menu_boisson_aromatik (type_boisson,titre_boisson,description_boisson,prix_boisson,contenance_boisson,prix2_boisson,contenance2_boisson) VALUES ("' . $_POST["type_boisson"] . '","' . $_POST["titre_boisson"] . '","' . $_POST["description_boisson"] .'","' . $_POST["prix_boisson"] .'","' . $_POST["contenance_boisson"] .'","' . $_POST["prix2_boisson"] .'","' . $_POST["contenance2_boisson"] . '")';
+            $execMenu = $pdo->exec($requetMenu);
+
+        } else {
+
+            $requetMenu = 'INSERT INTO menu_boisson_aromatik (type_boisson,titre_boisson,description_boisson,prix_boisson,contenance_boisson) VALUES ("' . $_POST["type_boisson"] . '","' . $_POST["titre_boisson"] . '","' . $_POST["description_boisson"] .'","' . $_POST["prix_boisson"] .'","' . $_POST["contenance_boisson"] . '")';
+            $execMenu = $pdo->exec($requetMenu);
+
+        }
     }
 
     ?>
